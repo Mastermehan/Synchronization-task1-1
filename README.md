@@ -44,4 +44,20 @@
   Если возникают затруднения, посмотрите код из лекции с магазином
 </details>
 
+ДЛя рандомности машин public class Car {
 
+    public static final String[] CAR_MODELS = {"Тойота", "Лада"};
+    public static final Random RANDOM = new Random();
+    private final String name;
+
+    public Car() {
+
+        this.name = CAR_MODELS[RANDOM.nextInt(CAR_MODELS.length - 1)];
+    }
+
+    @Override
+    public String toString() {
+
+        return this.name;
+    }
+}
